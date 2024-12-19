@@ -1,0 +1,10 @@
+{
+  "singleQuote": true,
+  "singleAttributePerLine": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "printWidth": 100,
+  "trailingComma": "all",
+  "semi": false,
+  "tailwindFunctions": ["cva", "cn", "clsx", "twMerge", "primeVueTheme"],
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
