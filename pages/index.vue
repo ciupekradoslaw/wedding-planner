@@ -50,7 +50,7 @@ const monthsToDisplay = (months: number) => {
         :target-date="targetDate"
       >
         {{ years === 0 ? '' : years }} {{ yearsToDisplay(years) }} {{ months }}
-        {{ monthsToDisplay(0) }} {{ days }} {{ daysToDisplay(days) }} {{ hours }}
+        {{ monthsToDisplay(months) }} {{ days }} {{ daysToDisplay(days) }} {{ hours }}
         {{ hoursToDisplay(hours) }} {{ minutes }} {{ minutesToDisplay(minutes) }} {{ seconds }}
         {{ secondsToDisplay(seconds) }}
       </DateCountdown>
