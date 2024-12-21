@@ -14,23 +14,26 @@ const secondsToDisplay = (sec: number | undefined) => {
   return sec < 5 ? t('time.secondsLessThanFive') : t('time.seconds')
 }
 
-const hoursToDisplay = (hour: number) => {
-  if (hour === 0) return t('time.hours')
+const hoursToDisplay = (hour: number | undefined) => {
+  if (!hour) return t('time.hours')
   if (hour === 1) return t('time.hoursEqualsOne')
 
   return hour < 5 ? t('time.hoursLessThanFive') : t('time.hours')
 }
-const minutesToDisplay = (minutes: number) => {
-  if (minutes === 0) return t('time.minutes')
+const minutesToDisplay = (minutes: number | undefined) => {
+  if (!minutes) return t('time.minutes')
   if (minutes === 1) return t('time.minutesEqualsOne')
   return minutes < 5 ? t('time.minutesLessThanFive') : t('time.minutes')
 }
 
-const daysToDisplay = (days: number) => (days === 1 ? t('time.daysEqualsOne') : t('time.days'))
-const yearsToDisplay = (years: number) => (years === 0 ? '' : t('time.years'))
+const daysToDisplay = (days: number | undefined) =>
+  !days || days !== 1 ? t('time.days') : t('time.daysEqualsOne')
+const yearsToDisplay = (years: number | undefined) => {
+  return !years ? '' : t('time.years')
+}
 
-const monthsToDisplay = (months: number) => {
-  if (months === 0) return t('time.months')
+const monthsToDisplay = (months: number | undefined) => {
+  if (!months) return t('time.months')
   if (months === 1) return t('time.monthsEqualsOne')
 
   return months < 5 ? t('time.monthsLessThanFive') : t('time.months')
@@ -40,7 +43,7 @@ const monthsToDisplay = (months: number) => {
   <div class="flex min-h-full w-full flex-col items-center justify-start p-10">
     <span class="mb-10 text-5xl text-primary">{{ t('home.title') }}</span>
 
-    <span class="text-2xl">Do wesela pozostało:</span>
+    <span class="text-2xl">{{ t('home.timeRemaining') }}</span>
     <span
       v-if="isClient"
       class="text-2xl"

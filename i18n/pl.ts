@@ -7,6 +7,7 @@ export default {
   },
   home: {
     title: 'Wesele Zuzanny i Radosława',
+    timeRemaining: 'Do wesela pozostało',
   },
   time: {
     years: 'rok',
