@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,35 +7,37 @@
 @layer base {
   :root,
   .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 60 9.1% 97.8%;
+    --background: 220 14.3% 10%;
+    --foreground: 60 9.1% 90%;
 
-    --card: 20 14.3% 4.1%;
-    --card-foreground: 60 9.1% 97.8%;
+    --card: 220 14.3% 15%;
+    --card-foreground: 60 9.1% 90%;
 
-    --popover: 20 14.3% 4.1%;
-    --popover-foreground: 60 9.1% 97.8%;
+    --popover: 220 14.3% 15%;
+    --popover-foreground: 60 9.1% 90%;
 
-    --primary: 41 72% 44%;
+    --primary: 46 100% 26%;
     --primary-foreground: 60 9.1% 97.8%;
 
-    --secondary: 12 6.5% 15.1%;
-    --secondary-foreground: 60 9.1% 97.8%;
+    --secondary: 12 30% 20%;
+    --secondary-foreground: 60 9.1% 90%;
 
-    --muted: 12 6.5% 15.1%;
-    --muted-foreground: 24 5.4% 63.9%;
+    --muted: 12 10% 25%;
+    --muted-foreground: 24 5.4% 75%;
 
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 60 9.1% 97.8%;
+    --accent: 12 15% 25%;
+    --accent-foreground: 60 9.1% 90%;
 
     --destructive: 0 72.2% 50.6%;
-    --destructive-foreground: 60 9.1% 97.8%;
+    --destructive-foreground: 60 9.1% 90%;
 
-    --border: 12 6.5% 15.1%;
-    --input: 12 6.5% 15.1%;
+    --border: 12 6.5% 20%;
+    --input: 12 10% 30%;
     --ring: 20.5 90.2% 48.2%;
 
     --radius: 0.75rem;
+    --font-family: 'Style Script', system-ui, sans-serif;
+    --font-size: 1.8rem;
   }
 }
 
@@ -44,5 +48,10 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    font-family: var(--font-family), sans, serif;
+    font-size: var(--font-size);
   }
 }

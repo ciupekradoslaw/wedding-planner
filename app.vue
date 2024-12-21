@@ -4,9 +4,9 @@ import TopNavbar from '~/components/navbar/TopNavbar.vue'
 
 <template>
   <div class="flex max-h-full min-h-[100vh] flex-grow flex-col overflow-auto bg-background">
-    <NuxtLayout>
+    <NuxtLayout class="flex flex-grow flex-col">
       <TopNavbar />
-      <NuxtPage />
+      <NuxtPage class="flex-grow" />
     </NuxtLayout>
   </div>
 </template>
